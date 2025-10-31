@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Manajemen OTP</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <header><h1>Admin Panel OTP</h1></header>
+    <main class="container">
+        <section class="admin-card">
+            <h2>Pesanan Aktif (Butuh Tindakan)</h2>
+            <div id="pending-orders-list">
+                <p class="placeholder">Memuat pesanan...</p>
+            </div>
+        </section>
+        
+        <section class="admin-card">
+            <h2>Manajemen Layanan</h2>
+            <div id="service-list"></div>
+            <form id="add-service-form" class="management-form">
+                <input type="text" id="service-name" placeholder="Nama Layanan (misal: Gojek)" required>
+                <input type="number" id="service-price" placeholder="Harga" required>
+                <input type="number" id="service-stock" placeholder="Stok Awal" required>
+                <button type="submit">Tambah Layanan</button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="admin-script.js"></script>
+</body>
+</html>
