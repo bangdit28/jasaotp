@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Pembelian Nomor OTP</title>
+
+    <!-- FONTS & ICONS (WAJIB ADA) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" />
+
+    <!-- FILE CSS LOKAL KAMU -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR / HEADER -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">FastBit</a>
+            <div class="navbar-menu">
+                <div class="balance-display">
+                    <small>Saldo Aktif</small>
+                    <span id="user-balance">Rp 3.741</span>
+                    <button class="btn-topup" title="Top Up Saldo">+</button>
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/40" alt="Avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main class="container">
+        <!-- ===== BAGIAN ORDER AKTIF (AWALNYA TERSEMBUNYI) ===== -->
+        <section id="active-order-section" class="main-card d-none">
+            <h4 id="active-order-title">Menunggu SMS untuk WhatsApp...</h4>
+            <div class="active-order-grid">
+                <!-- Nomor Virtual -->
+                <div class="info-box">
+                    <label>Nomor Virtual</label>
+                    <div class="value-display" id="virtual-number-display">
+                        <span id="virtual-number">+62 812 3456 7890</span>
+                        <button id="copy-number-btn" title="Salin Nomor"><i class='bx bx-copy'></i></button>
+                    </div>
+                </div>
+                <!-- Waktu Mundur -->
+                <div class="info-box text-center">
+                    <label>Waktu Tersisa</label>
+                    <div class="timer-display" id="countdown-timer">04:59</div>
+                </div>
+                <!-- Kode OTP -->
+                <div class="info-box">
+                    <label>Kode OTP</label>
+                    <div class="value-display" id="otp-code-display">
+                        <span id="otp-code" class="text-muted">Menunggu SMS...</span>
+                        <button id="copy-otp-btn" class="d-none" title="Salin Kode"><i class='bx bx-copy'></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="cancel-order-btn" class="btn btn-outline">Batalkan Pesanan</button>
+                <button id="resend-sms-btn" class="btn btn-primary">Kirim Ulang SMS</button>
+            </div>
+        </section>
+
+
+        <!-- ===== BAGIAN PEMBELIAN (FORM UTAMA) ===== -->
+        <section id="order-form-section" class="main-card">
+            <h4>Beli Nomor Virtual OTP</h4>
+            <p class="text-muted">Pilih layanan yang Anda butuhkan untuk verifikasi.</p>
+            
+            <div class="search-container">
+                <i class='bx bx-search'></i>
+                <input type="text" id="search-service" placeholder="Cari layanan (misal: WhatsApp, Gojek...)">
+            </div>
+
+            <div id="service-list" class="service-grid">
+                <!-- Daftar layanan akan diisi oleh JavaScript -->
+                <div class="skeleton-loader"></div>
+                <div class="skeleton-loader"></div>
+                <div class="skeleton-loader"></div>
+                <div class="skeleton-loader"></div>
+            </div>
+        </section>
+
+        <!-- ===== BAGIAN RIWAYAT ORDER ===== -->
+        <section id="history-section" class="main-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Riwayat Pesanan Terakhir</h4>
+                <a href="#" class="view-all-link">Lihat Semua <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="table-responsive">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Layanan</th>
+                            <th>Nomor</th>
+                            <th>Status</th>
+                            <th>Tanggal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body">
+                        <!-- Riwayat akan diisi oleh JavaScript -->
+                        <tr><td colspan="4" class="text-center text-muted pt-3">Tidak ada riwayat.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 NamaLayananAnda. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- FILE JAVASCRIPT LOKAL KAMU -->
+    <script src="script.js"></script>
+</body>
+</html>
