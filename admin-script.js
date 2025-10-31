@@ -2,13 +2,13 @@
 // GANTI DENGAN KONFIGURASI FIREBASE LO!
 // =================================================================
 const firebaseConfig = {
-    apiKey: "AIzaSy...",
-    authDomain: "...",
-    databaseURL: "https://nama-proyek-lo-default-rtdb.firebaseio.com",
-    projectId: "...",
-    storageBucket: "...",
-    messagingSenderId: "...",
-    appId: "..."
+  apiKey: "AIzaSyAObivzsuB3SiixRMhUtz_0bktasM3yyw0",
+  authDomain: "jasaotp-8e1f4.firebaseapp.com",
+  databaseURL: "https://jasaotp-8e1f4-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "jasaotp-8e1f4",
+  storageBucket: "jasaotp-8e1f4.firebasestorage.app",
+  messagingSenderId: "572441136683",
+  appId: "1:572441136683:web:f40ea33eb39767cae6646e"
 };
 
 // Inisialisasi Firebase
