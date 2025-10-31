@@ -1,0 +1,15 @@
+body { font-family: sans-serif; background-color: #f0f2f5; color: #333; margin: 0; }
+header { background-color: #333; color: white; padding: 1rem; text-align: center; }
+.container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+.admin-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+h2 { margin-top: 0; }
+
+.order-item { border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-bottom: 10px; }
+.order-item strong { color: #555; }
+.order-actions { margin-top: 10px; display: flex; gap: 10px; align-items: center; }
+.order-actions input { flex-grow: 1; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+.order-actions button { padding: 8px 12px; border: none; background: #28a745; color: white; cursor: pointer; border-radius: 4px; }
+.placeholder { color: #888; }
+.management-form { display: flex; gap: 10px; margin-top: 15px; }
+.management-form input { padding: 8px; flex-grow: 1; }
+.management-form button { padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer; }
